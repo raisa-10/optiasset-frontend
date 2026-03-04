@@ -18,8 +18,8 @@ Component: <QuickActionButtons /> - Shortcuts for Add User and Add Asset
 ---
 
 ### Page: /users
-Component: <Sidebar />  
-Component: <TopNavbar />  
+Component: <Sidebar /> - Reusable navigation panel  
+Component: <TopNavbar /> - User profile and logout  
 Component: <UserDataTable /> - Searchable and filterable table of all users  
 Component: <AddUserModal /> - Form to create a new user  
 Component: <EditUserModal /> - Update existing user details  
@@ -28,8 +28,8 @@ Component: <DeleteUserConfirmation /> - Confirmation dialog before deletion
 ---
 
 ### Page: /assets
-Component: <Sidebar />  
-Component: <TopNavbar />  
+Component: <Sidebar /> - Reused navigation  
+Component: <TopNavbar /> - Header section  
 Component: <AssetDataTable /> - Displays all company assets with pagination  
 Component: <AddAssetModal /> - Add new asset form  
 Component: <EditAssetModal /> - Update asset details  
@@ -38,8 +38,8 @@ Component: <AssetStatusBadge /> - Displays status (Available, Assigned, Broken)
 ---
 
 ### Page: /assignments
-Component: <Sidebar />  
-Component: <TopNavbar />  
+Component: <Sidebar /> - Navigation panel  
+Component: <TopNavbar /> - Header  
 Component: <AssignmentTable /> - Shows asset assignment history  
 Component: <AssignAssetModal /> - Assign asset to a user  
 Component: <ReturnAssetButton /> - Mark asset as returned  
@@ -47,8 +47,8 @@ Component: <ReturnAssetButton /> - Mark asset as returned
 ---
 
 ### Page: /reports
-Component: <Sidebar />  
-Component: <TopNavbar />  
+Component: <Sidebar /> - Navigation  
+Component: <TopNavbar /> - Header  
 Component: <AssetUtilizationChart /> - Visual graph of asset usage  
 Component: <BrokenAssetsList /> - List of damaged assets  
 Component: <ExportReportButton /> - Download report as CSV or PDF  
@@ -59,28 +59,28 @@ Component: <ExportReportButton /> - Download report as CSV or PDF
 (Can manage assets and assignments but not users)
 
 ### Page: /dashboard
-Component: <Sidebar />  
-Component: <TopNavbar />  
-Component: <StatCards />  
-Component: <RecentAssignmentsTable />  
+Component: <Sidebar /> - Navigation links  
+Component: <TopNavbar /> - User profile section  
+Component: <StatCards /> - Overview of asset status  
+Component: <RecentAssignmentsTable /> - Recent assignment list  
 
 ---
 
 ### Page: /assets
-Component: <Sidebar />  
-Component: <TopNavbar />  
-Component: <AssetDataTable />  
-Component: <AddAssetModal />  
-Component: <EditAssetModal />  
+Component: <Sidebar /> - Navigation  
+Component: <TopNavbar /> - Header  
+Component: <AssetDataTable /> - List of all assets  
+Component: <AddAssetModal /> - Add new asset  
+Component: <EditAssetModal /> - Update asset  
 
 ---
 
 ### Page: /assignments
-Component: <Sidebar />  
-Component: <TopNavbar />  
-Component: <AssignmentTable />  
-Component: <AssignAssetModal />  
-Component: <ReturnAssetButton />  
+Component: <Sidebar /> - Navigation  
+Component: <TopNavbar /> - Header  
+Component: <AssignmentTable /> - List of assignments  
+Component: <AssignAssetModal /> - Assign asset to user  
+Component: <ReturnAssetButton /> - Return assigned asset  
 
 ---
 
@@ -88,7 +88,7 @@ Component: <ReturnAssetButton />
 (Can only view assets assigned to them)
 
 ### Page: /my-assets
-Component: <TopNavbar />  
+Component: <TopNavbar /> - Profile and logout  
 Component: <MyAssetList /> - Grid view of assigned devices  
 Component: <AssetDetailsModal /> - View detailed information  
 Component: <ReportIssueButton /> - Report if asset is broken  
@@ -96,7 +96,7 @@ Component: <ReportIssueButton /> - Report if asset is broken
 ---
 
 ### Page: /profile
-Component: <TopNavbar />  
+Component: <TopNavbar /> - Header  
 Component: <ProfileDetailsCard /> - Displays personal details  
 Component: <ChangePasswordForm /> - Allows password update  
 
@@ -105,17 +105,17 @@ Component: <ChangePasswordForm /> - Allows password update
 ## Common Pages (Accessible to All Roles)
 
 ### Page: /login
-Component: <LoginForm /> - Email and password fields  
-Component: <BrandLogo />  
+Component: <LoginForm /> - Email and password input fields  
+Component: <BrandLogo /> - Application logo  
 
 ---
 
 ### Page: /forgot-password
-Component: <ForgotPasswordForm />  
+Component: <ForgotPasswordForm /> - Enter email to reset password  
 
 ---
 
 ### Page: /reset-password
-Component: <ResetPasswordForm />  
+Component: <ResetPasswordForm /> - Enter new password  
 
 ---
