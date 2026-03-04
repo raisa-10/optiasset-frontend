@@ -1,97 +1,121 @@
 # OptiAsset - Frontend Architecture Document
-Framework: Next.js
-Architecture Type: Role-Based UI Mapping
+Framework: Next.js  
+Architecture Pattern: Role-Based UI Structure  
+Project Type: IT Asset Management System  
 
---------------------------------------------
+---
 
-Role: IT Administrator (Full access to manage users, assets, and assignments)
+## Role: IT Administrator
+(Full access to manage users, assets, assignments, and reports)
 
-Page: /dashboard
-Component: <Sidebar /> - Navigation (Dashboard, Assets, Users, Assignments, Reports)
-Component: <TopNavbar /> - Profile dropdown and logout
-Component: <StatCards /> - Total Assets, Assigned Assets, Available Assets, Broken Assets
-Component: <RecentAssignmentsTable /> - Last 5 assignments overview
-Component: <QuickActionsPanel /> - Add Asset / Add User shortcuts
+### Page: /dashboard
+Component: <Sidebar /> - Navigation links (Dashboard, Users, Assets, Assignments, Reports)  
+Component: <TopNavbar /> - Logged-in profile display and logout button  
+Component: <StatCards /> - Displays Total Assets, Assigned Assets, Available Assets, Broken Assets  
+Component: <RecentAssignmentsTable /> - Shows the latest 5 asset assignments  
+Component: <QuickActionButtons /> - Shortcuts for Add User and Add Asset  
 
-Page: /users
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <UserDataTable /> - Table with search and filter
-Component: <AddUserModal /> - Form popup
-Component: <EditUserModal />
-Component: <DeleteUserConfirmation />
+---
 
-Page: /assets
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <AssetDataTable /> - Search, filter, pagination
-Component: <AddAssetModal />
-Component: <EditAssetModal />
-Component: <AssetStatusBadge />
+### Page: /users
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <UserDataTable /> - Searchable and filterable table of all users  
+Component: <AddUserModal /> - Form to create a new user  
+Component: <EditUserModal /> - Update existing user details  
+Component: <DeleteUserConfirmation /> - Confirmation dialog before deletion  
 
-Page: /assignments
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <AssignmentTable />
-Component: <AssignAssetModal />
-Component: <ReturnAssetButton />
+---
 
-Page: /reports
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <AssetUtilizationChart />
-Component: <BrokenAssetsList />
-Component: <ExportReportButton />
+### Page: /assets
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <AssetDataTable /> - Displays all company assets with pagination  
+Component: <AddAssetModal /> - Add new asset form  
+Component: <EditAssetModal /> - Update asset details  
+Component: <AssetStatusBadge /> - Displays status (Available, Assigned, Broken)  
 
---------------------------------------------
+---
 
-Role: Asset Manager (Manages assets and assignments only)
+### Page: /assignments
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <AssignmentTable /> - Shows asset assignment history  
+Component: <AssignAssetModal /> - Assign asset to a user  
+Component: <ReturnAssetButton /> - Mark asset as returned  
 
-Page: /dashboard
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <StatCards />
-Component: <RecentAssignmentsTable />
+---
 
-Page: /assets
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <AssetDataTable />
-Component: <AddAssetModal />
-Component: <EditAssetModal />
+### Page: /reports
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <AssetUtilizationChart /> - Visual graph of asset usage  
+Component: <BrokenAssetsList /> - List of damaged assets  
+Component: <ExportReportButton /> - Download report as CSV or PDF  
 
-Page: /assignments
-Component: <Sidebar />
-Component: <TopNavbar />
-Component: <AssignmentTable />
-Component: <AssignAssetModal />
-Component: <ReturnAssetButton />
+---
 
---------------------------------------------
+## Role: Asset Manager
+(Can manage assets and assignments but not users)
 
-Role: Standard Employee (View only access to assigned assets)
+### Page: /dashboard
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <StatCards />  
+Component: <RecentAssignmentsTable />  
 
-Page: /my-assets
-Component: <TopNavbar />
-Component: <MyAssetList /> - Cards showing assigned devices
-Component: <AssetDetailsModal />
-Component: <ReportIssueButton />
+---
 
-Page: /profile
-Component: <TopNavbar />
-Component: <ProfileDetailsCard />
-Component: <ChangePasswordForm />
+### Page: /assets
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <AssetDataTable />  
+Component: <AddAssetModal />  
+Component: <EditAssetModal />  
 
---------------------------------------------
+---
 
-Common Pages (Shared Across Roles)
+### Page: /assignments
+Component: <Sidebar />  
+Component: <TopNavbar />  
+Component: <AssignmentTable />  
+Component: <AssignAssetModal />  
+Component: <ReturnAssetButton />  
 
-Page: /login
-Component: <LoginForm />
-Component: <BrandLogo />
+---
 
-Page: /forgot-password
-Component: <ForgotPasswordForm />
+## Role: Standard Employee
+(Can only view assets assigned to them)
 
-Page: /reset-password
-Component: <ResetPasswordForm />
+### Page: /my-assets
+Component: <TopNavbar />  
+Component: <MyAssetList /> - Grid view of assigned devices  
+Component: <AssetDetailsModal /> - View detailed information  
+Component: <ReportIssueButton /> - Report if asset is broken  
+
+---
+
+### Page: /profile
+Component: <TopNavbar />  
+Component: <ProfileDetailsCard /> - Displays personal details  
+Component: <ChangePasswordForm /> - Allows password update  
+
+---
+
+## Common Pages (Accessible to All Roles)
+
+### Page: /login
+Component: <LoginForm /> - Email and password fields  
+Component: <BrandLogo />  
+
+---
+
+### Page: /forgot-password
+Component: <ForgotPasswordForm />  
+
+---
+
+### Page: /reset-password
+Component: <ResetPasswordForm />  
+
+---
